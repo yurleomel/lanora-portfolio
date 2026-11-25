@@ -1,0 +1,16 @@
+{
+  "name": "lanora",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Lanora — personal Telegram assistant (Node.js service; formerly n8n workflows).",
+  "engines": {
+    "node": ">=24"
+  },
+  "dependencies": {
+    "luxon": "3.7.2"
+  },
+  "scripts": {
+    "test": "JS_DIR=bot/js LUXON=\"$PWD/node_modules/luxon\" node --test --test-reporter=spec bot/tests/logic.test.js app/tests/bot.test.js",
+    "start": "node app/main.js"
+  }
+}
